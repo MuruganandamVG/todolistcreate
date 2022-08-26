@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import index,delete
+from . import views
 
-urlpatterns=[
-    path('',index,name='index'),
-    path('delete/<str:pk>',delete,name='delete')
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('delete/<str:pk>', views.delete, name='delete')
 ]
